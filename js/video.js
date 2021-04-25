@@ -67,12 +67,13 @@ var TelehealthEdu = window.TelehealthEdu || {};
 
     function handlePickupChanged() {
         var requestButton = $('#request');
-        requestButton.text('Request Video');
+//        requestButton.text('Request Video');
 //        requestButton.prop('disabled', false);
     }
 
     function handleRequestClick(event) {
 //        var pickupLocation = TelehealthEdu.map.selectedPoint;
+        console.log($('#video-name'))
         var videoName = $('#video-name').value
         event.preventDefault();
         requestVideoURL(videoName);
