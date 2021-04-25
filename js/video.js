@@ -39,15 +39,17 @@ var TelehealthEdu = window.TelehealthEdu || {};
 //        var pronoun;
         console.log('Response received from API: ', result);
         video = result.Video;
-        displayUpdate(video.Name + ', URL is ' + video.URL);
-        animateArrival(function animateCallback() {
-            displayUpdate(video.Name + ' was found');
-            console.log($('#video-frame'))
-            $('#video-frame').src(video.URL);
-//            TelehealthEdu.map.unsetLocation();
-//            $('#request').prop('disabled', 'disabled');
-//            $('#request').text('Set Pickup');
-        });
+        displayUpdate(video.Name + ' URL is ' + video.URL);
+        console.log($('#video-frame'))
+        $('#video-frame').src(video.URL);
+//        animateArrival(function animateCallback() {
+//            displayUpdate(video.Name + ' was found');
+//            console.log($('#video-frame'))
+//            $('#video-frame').src(video.URL);
+////            TelehealthEdu.map.unsetLocation();
+////            $('#request').prop('disabled', 'disabled');
+////            $('#request').text('Set Pickup');
+//        });
     }
 
     // Register click handler for #request button
