@@ -36,26 +36,16 @@ var TelehealthEdu = window.TelehealthEdu || {};
 
     function completeRequest(result) {
         var video;
-//        var pronoun;
         console.log('Response received from API: ', result);
         video = result.Video;
         displayUpdate(video.Name + ' URL is ' + video.URL);
         console.log($('#video-frame'))
         $('#video-frame')[0].src = video.URL;
-//        animateArrival(function animateCallback() {
-//            displayUpdate(video.Name + ' was found');
-//            console.log($('#video-frame'))
-//            $('#video-frame').src(video.URL);
-////            TelehealthEdu.map.unsetLocation();
-////            $('#request').prop('disabled', 'disabled');
-////            $('#request').text('Set Pickup');
-//        });
     }
 
     // Register click handler for #request button
     $(function onDocReady() {
         $('#request').click(handleRequestClick);
-//        $(TelehealthEdu.map).on('pickupChange', handlePickupChanged);
 
         TelehealthEdu.authToken.then(function updateAuthMessage(token) {
             if (token) {
@@ -71,35 +61,13 @@ var TelehealthEdu = window.TelehealthEdu || {};
 
     function handlePickupChanged() {
         var requestButton = $('#request');
-//        requestButton.text('Request Video');
-//        requestButton.prop('disabled', false);
     }
 
     function handleRequestClick(event) {
-//        var pickupLocation = TelehealthEdu.map.selectedPoint;
         console.log($('#video-name'))
         var videoName = $('#video-name')[0].value
         event.preventDefault();
         requestVideoURL(videoName);
-    }
-
-    function animateArrival(callback) {
-//        var dest = TelehealthEdu.map.selectedPoint;
-//        var origin = {};
-//
-//        if (dest.latitude > TelehealthEdu.map.center.latitude) {
-//            origin.latitude = TelehealthEdu.map.extent.minLat;
-//        } else {
-//            origin.latitude = TelehealthEdu.map.extent.maxLat;
-//        }
-//
-//        if (dest.longitude > TelehealthEdu.map.center.longitude) {
-//            origin.longitude = TelehealthEdu.map.extent.minLng;
-//        } else {
-//            origin.longitude = TelehealthEdu.map.extent.maxLng;
-//        }
-//
-//        TelehealthEdu.map.animate(origin, dest, callback);
     }
 
     function displayUpdate(text) {
