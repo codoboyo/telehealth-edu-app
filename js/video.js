@@ -42,6 +42,8 @@ var TelehealthEdu = window.TelehealthEdu || {};
         displayUpdate(video.Name + ', URL is ' + video.URL);
         animateArrival(function animateCallback() {
             displayUpdate(video.Name + ' was found');
+            console.log($('#video-frame'))
+            $('#video-frame').src(video.URL);
 //            TelehealthEdu.map.unsetLocation();
 //            $('#request').prop('disabled', 'disabled');
 //            $('#request').text('Set Pickup');
