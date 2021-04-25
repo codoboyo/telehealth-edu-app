@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>Wild Rydes</title>
+    <title>TELEHEATH EDU</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +22,8 @@
 
     <div class="info panel panel-default">
         <div class="panel-heading">
-            <button id="request" class="btn btn-primary" disabled="disabled">Set pickup</button>
+            <input id="video-name" type="text">
+            <button id="request" class="btn btn-primary">Search video</button>
             <div class="dropdown pull-right">
                 <button id="accountLink" class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Account <span class="caret"></span>
@@ -34,7 +35,7 @@
         </div>
         <div class="panel-body">
             <ol id="updates">
-                <li>Welcome! Click the map to set your pickup location.</li>
+                <li>Welcome! Click on a video to start playing.</li>
             </ol>
         </div>
     </div>
@@ -66,8 +67,8 @@
     </div>
 
     <div id="main">
-        <iframe width="420" height="315"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        <iframe width="840" height="730"
+                src="https://www.youtube.com/watch?v=oq_AfeToxZk">
         </iframe>
     </div>
 
@@ -97,7 +98,7 @@
     <script src="js/config.js"></script>
     <script src="js/cognito-auth.js"></script>
     <script src="js/esri-map.js"></script>
-    <script src="js/ride.js"></script>
+    <script src="js/video.js"></script>
 </body>
 
 </html>
