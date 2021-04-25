@@ -74,7 +74,7 @@ var TelehealthEdu = window.TelehealthEdu || {};
     function handleRequestClick(event) {
 //        var pickupLocation = TelehealthEdu.map.selectedPoint;
         console.log($('#video-name'))
-        var videoName = $('#video-name').value
+        var videoName = $('#video-name')[0].value
         event.preventDefault();
         requestVideoURL(videoName);
     }
