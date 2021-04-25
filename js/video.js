@@ -41,7 +41,7 @@ var TelehealthEdu = window.TelehealthEdu || {};
         video = result.Video;
         displayUpdate(video.Name + ' URL is ' + video.URL);
         console.log($('#video-frame'))
-        $('#video-frame').src(video.URL);
+        $('#video-frame')[0].src = video.URL;
 //        animateArrival(function animateCallback() {
 //            displayUpdate(video.Name + ' was found');
 //            console.log($('#video-frame'))
