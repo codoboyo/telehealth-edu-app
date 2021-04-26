@@ -38,7 +38,7 @@ var TelehealthEdu = window.TelehealthEdu || {};
         var video;
         console.log('Response received from API: ', result);
         video = result.Video;
-        displayUpdate(video.Name + ' URL is ' + video.URL);
+        displayUpdate(video.Name + ' embed URL is: ' + video.URL);
         console.log($('#video-frame'))
         $('#video-frame')[0].src = video.URL;
     }
