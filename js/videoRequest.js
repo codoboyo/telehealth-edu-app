@@ -7,7 +7,7 @@ const AWS = require('aws-sdk');
 
 const ddb = new AWS.DynamoDB.DocumentClient();
 
-const videos = [
+const fleet = [
     {
         Name: 'SimplePractice: Telehealth Set Up and Best Practices',
         URL: 'https://www.youtube.com/embed\/oq_AfeToxZk',
@@ -19,10 +19,6 @@ const videos = [
     {
         Name: 'Is Telemedicine The Future Of Health Care?',
         URL: 'https://www.youtube.com/embed\/PLp6U5mUMQQ',
-    },
-    {
-        Name: 'Telehealth',
-        URL: 'https://www.youtube.com/embed\/MYP7XxK26bM',
     },
 ];
 
@@ -86,7 +82,7 @@ exports.handler = (event, context, callback) => {
 // For simplicity, we'll just pick a unicorn at random.
 function findVideo(videoName) {
     console.log('Finding video for ', videoName);
-    return videos.find(f => f.Name === videoName);
+    return fleet.find(f => f.Name === videoName);
 }
 
 function recordVideo(videoId, username, video) {
